@@ -25,10 +25,8 @@ im_list = []
 doc = Image.new('RGB', (1, 1))
 
 for i in range(0, BOOK_LENGTH):
-    press(ACTION)  # Assuming the down arrow key switches between pages
-    # Change to press("right") if right arrow key works instead, and so on.
-
-    time.sleep(PAUSE_BETWEEN)  # arbitrary delay between screenshots
+    press(ACTION)
+    time.sleep(PAUSE_BETWEEN)
     im = ImageGrab.grab(bbox=box).convert('RGB')
     im_list.append(im)
 
